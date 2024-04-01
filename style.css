@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 16px;
+    height: 56px;
+    background: rgb(255, 255, 255);
+    border-bottom: 2px solid rgb(222, 222, 222);
+    
+}
+
+.navbar .left-content{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.navbar .left-content .hamburger{
+    margin-right: 10px;
+    font-size: larger;
+   display: flex;
+   padding: 10px;
+   align-items: center;
+}
+
+.navbar .left-content .hamburger:hover{
+    background-color: rgb(106, 106, 106);
+    border-radius: 50%;
+   
+}
+
+.navbar .left-content .logo-youtube{
+    font-size: 30px;
+    color: red;
+    display: flex;
+}
+
+.navbar .left-content .logo-youtube a{
+    display: flex;
+    color: red;
+    text-decoration: none;
+    height: 100%;
+}
+
+.navbar .left-content .font-youtube{
+    display: flex;
+   position: relative;
+
+}
+
+
+
+.navbar .left-content .font-youtube h2{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 100;
+    position: relative;
+    color: black;
+}
+
+.navbar .left-content .font-youtube p{
+    position: absolute;
+    top: -6px;
+    right: -16px;
+    font-family: sans-serif;
+    font-size: 13px;
+    color: rgb(41, 41, 41);
+}
+
+/* mid-content */
+
+.mid-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 1;
+}
+
+.mid-content .search{
+    display: flex;
+    flex: 1 1;
+}
+
+.mid-content form{
+    display: flex;
+    flex:1 1;
+}
+.mid-content input{
+    /* flex-grow: 1; */
+    /* width: 300px; */
+    /* width: 50rem; */
+    flex: 1 1;
+    height: 40px;
+    border-radius: 20px 0px 0px 20px;
+    border: 1px solid rgb(189, 189, 189);
+    padding: 10px;
+    position: relative;
+    margin-left: 100px;
+}
+
+.mid-content .fa-magnifying-glass{
+    background-color: rgb(226, 226, 226);
+    padding: 10px 24px;
+    position: relative;
+    /* left: -1.5px; */
+    border-radius: 0px 20px 20px 0px;
+    color: rgb(34, 34, 34);
+    border: 1px solid rgb(189, 189, 189);
+    border-left: none;
+    height: 40px;
+    
+}
+
+.mid-content .fa-microphone{
+    display: flex;
+    padding: 11px 13px;
+    background: rgb(219, 219, 219);
+    border-radius: 50%;
+    margin-left: 10px;
+    color:rgb(46, 46, 46);
+    margin-right: 3rem;
+}
+
+.right-content{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+}
+
+.right-content .fa-video, .right-content .fa-bell{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.right-content .fa-video, .right-content .fa-bell,.right-content .fa-user{
+    color:rgb(46, 46, 46);
+}
+
+.right-content .fa-video:hover{
+    background-color: rgb(185, 185, 185);
+    border-radius: 50%;
+}
+
+.right-content .fa-bell:hover{
+    background-color: rgb(185, 185, 185);
+    border-radius: 50%;
+}
+
+.right-content .profile-pic{
+    margin: 10px;
+    background: rgb(106, 106, 106);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.right-content a{
+    text-decoration: none;
+}
+
+@media (max-width: 700px) {
+
+    .mid-content .search{
+        display: flex;
+        justify-content: flex-end;
+        flex:0 0;
+        align-items:flex-end;
+    }
+
+    .mid-content input{
+        
+        display: flex;
+        justify-content: flex-end;
+        flex:0 0;
+    }
+
+    .mid-content .fa-magnifying-glass{
+        margin: 0;
+        padding: 0;
+        border: 0;
+        background: none;
+       
+        flex:0 0;
+    }
+}
+
+/* side-bar */
+
+html{
+    --header:56px;
+    --sidebar:240px;
+}
+
+main{
+    display: flex;
+    min-height: calc(100vh - var(--header));
+}
+
+.side-bar{
+    /* border: 1px dashed blue; */
+    min-width: var(--sidebar);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+
+.side-bar a{
+    padding-block: 10px;
+    margin: 0 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: rgb(66, 66, 66);
+}
+
+.side-bar a:first-child{
+    background: rgb(234, 234, 234);
+    width: 90%;
+    border-radius: 10px;
+    margin-top: 14px;
+}
+
+.side-bar a:hover{
+    background: rgb(234, 234, 234);
+    width: 90%;
+    border-radius: 10px;
+   
+}
+
+.side-bar i{
+    display: flex;
+    align-items: center;
+    padding-block: 14px;
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+    color: rgb(66, 66, 66);
+}
+
+.side-bar p{
+    margin-left: 8px;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.side-bar .border{
+    border-bottom: 1px solid rgb(218, 218, 218);
+    width: 80%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.side-bar h2{
+    font-size: 18px;
+    margin-left: 20px;
+    margin-bottom: 8px;
+
+}
+/* content */
+.content{
+    /* border: 1px solid red; */
+    flex-grow:1;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    /* height: 20rem; */
+}
+
+.content .content-card{
+    display: flex;
+    flex-direction: column;
+    background-color: none;
+    height: 290px;
+    width: 350px;
+    /* margin-bottom: px; */
+    margin-top: 14px;
+    /* border: 1px dashed red; */
+    position: relative;
+}
+
+.content .content-card .vid-card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    aspect-ratio: 16/9;
+}
+
+.content .content-card .vid-card img{
+    border-radius: 10px;
+    
+}
+
+
+.content .content-card .vid-card p{
+    position: absolute;
+    right: 14px;
+    bottom: 6px;
+    color: white;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.content .detail-card .profile-title{
+    display: flex;
+    gap: 12px;
+    margin-left: 8px;
+    margin-top: 10px;
+}
+
+.content .detail-card .profile-title i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(162, 162, 162);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%; 
+    color: grey;   
+}
+
+.content .detail-card .profile-title p{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.content .detail-card .channel-name{
+    display: flex;
+    gap: 4px;
+    margin-left: 16%;
+    margin-top: 8px;
+    font-size: 11px;
+    color: rgb(55, 55, 55);
+}
+.content .detail-card .watch-uploadtime{
+    display: flex;
+    gap: 4px;
+    margin-left: 16%;
+    margin-top: 4px;
+    font-size: 11px;
+    color: rgb(55, 55, 55);
+   
+}
